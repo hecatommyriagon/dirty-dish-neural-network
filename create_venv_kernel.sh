@@ -4,7 +4,7 @@ if [[ -n "$VIRTUAL_ENV" ]]; then
     echo "Virtual environment is active: $VIRTUAL_ENV"
     echo "Creating kernel"
     pip install ipykernel
-    ipython kernel install --user --name=projectname
+    ipython kernel install --user --name=.venv
     #python3 -m ipykernel install --user --name=.venv
     exit 0
 else
