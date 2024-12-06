@@ -1,3 +1,7 @@
 .venv
 .DS_Store
-src/data/train/*
+src/data/train/clean/*
+src/data/train/dirty/*
+src/data/train/processed/*
+src/uploads/*
+src/data/cache*

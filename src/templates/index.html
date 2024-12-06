@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Statistic Finder</title>
+    <style>
+        /* Styling for the banner logo */
+        .banner {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .banner img {
+            width: 50%; /* Scales the logo to 50% of its original width */
+            height: auto; /* Maintains aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <!-- Banner logo -->
+    <div class="banner">
+        <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Country Statistic Finder Logo">
+    </div>
+
+    <h1>Submit a picture of a clean or dirty dish </h1>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="file">Upload File (png or jpg only):</label>
+        <input type="file" id="file" name="file" required>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if classification %}
+        <h2>Classification:</h2>
+        <p>This dish is: {{ classification }}</p>
+    {% endif %}
+</body>
+</html>
